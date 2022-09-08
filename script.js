@@ -23,9 +23,11 @@ function game(){
         
         if (user === 'rock'){
             if (comp == 'scissors'){
-                document.getElementById("Output").innerHTML = "Won round";
-                console.log("Won round");
                 userScore += 1;
+                document.getElementById("Output").innerHTML = "Won round";
+                document.getElementById("MyScore").innerHTML = userScore;
+                console.log("Won round");
+                
             }
             else if (comp == 'paper'){
                 console.log("Lost round");
@@ -38,9 +40,11 @@ function game(){
         }
         if (user === 'scissors'){
             if (comp == 'paper'){
+                userScore += 1;
                 console.log("Won round");
                 document.getElementById("Output").innerHTML = "Won round";
-                userScore += 1;
+                document.getElementById("MyScore").innerHTML = userScore;
+                
             }
             else if (comp == 'rock'){
                 console.log("Lost round");
@@ -54,13 +58,16 @@ function game(){
         if (user === 'paper'){
             if (comp == 'rock'){
                 console.log("Won round");
-                document.getElementById("Output").innerHTML = "Won round";
                 userScore += 1;
+                document.getElementById("Output").innerHTML = "Won round";
+                document.getElementById("MyScore").innerHTML = userScore;
+                
             }
             else if (comp == 'scissors'){
                 console.log("Lost round");
                 document.getElementById("Output").innerHTML = "Lost round";
                 compScore += 1;
+                document.getElementById("CompScore").innerHTML = userScore;
             }
             else{
                 console.log("It's a tie");
